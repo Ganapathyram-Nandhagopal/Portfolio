@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Camera, Upload } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -48,23 +47,40 @@ const Hero = () => {
     }
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Dynamic Island */}
+      {/* Dynamic Island with Navigation */}
       <div className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-1000 ease-out ${
         islandExpanded 
-          ? 'w-80 h-16 bg-black/80 backdrop-blur-xl rounded-full' 
+          ? 'w-[600px] h-16 bg-black/80 backdrop-blur-xl rounded-full' 
           : 'w-32 h-8 bg-black/60 backdrop-blur-sm rounded-full'
       }`}>
-        <div className="flex items-center justify-center h-full px-6">
+        <div className="flex items-center justify-between h-full px-6">
           {islandExpanded && (
-            <div className="flex items-center space-x-4 animate-fade-in">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-white text-sm font-medium">Available for projects</span>
+            <div className="flex items-center justify-between w-full animate-fade-in">
+              <span className="text-blue-400 text-lg font-bold">Portfolio</span>
+              <div className="flex items-center space-x-6">
+                {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(item)}
+                    className="text-gray-300 hover:text-blue-400 text-sm font-medium transition-colors duration-200 capitalize"
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
               <div className="flex space-x-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <div className="w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-100"></div>
                 <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-200"></div>
-                <div className="w-1 h-1 bg-pink-400 rounded-full animate-pulse delay-300"></div>
               </div>
             </div>
           )}
