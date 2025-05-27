@@ -9,7 +9,7 @@ const Hero = () => {
   const [profileImage, setProfileImage] = useState<string | null>(null);
   const [islandExpanded, setIslandExpanded] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const texts = ['ERP Consultant', 'Tech Entrepreneur', 'App Developer', 'Digital Innovator'];
+  const texts = ['ERP Consultant', 'Tech Entrepreneur', 'Business Development Specialist', 'ERPNext Expert'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,16 +59,16 @@ const Hero = () => {
       {/* Dynamic Island Navigation */}
       <div className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-1000 ease-out ${
         islandExpanded 
-          ? 'w-[700px] h-16 bg-black/90 backdrop-blur-xl rounded-full border border-blue-500/20' 
+          ? 'w-[90vw] max-w-[700px] h-16 bg-black/90 backdrop-blur-xl rounded-full border border-blue-500/20' 
           : 'w-32 h-8 bg-black/60 backdrop-blur-sm rounded-full'
       }`}>
-        <div className="flex items-center justify-between h-full px-6">
+        <div className="flex items-center justify-between h-full px-3 md:px-6">
           {islandExpanded && (
             <div className="flex items-center justify-between w-full animate-fade-in">
-              <span className="text-blue-400 text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-blue-400 text-sm md:text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Portfolio
               </span>
-              <div className="flex items-center space-x-8">
+              <div className="hidden md:flex items-center space-x-8">
                 {['home', 'about', 'services', 'portfolio', 'contact'].map((item) => (
                   <button
                     key={item}
@@ -80,8 +80,8 @@ const Hero = () => {
                   </button>
                 ))}
               </div>
-              <div className="flex space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="flex space-x-1 md:space-x-2">
+                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <div className="w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-100"></div>
                 <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-200"></div>
               </div>
@@ -102,7 +102,7 @@ const Hero = () => {
         {/* Profile Section */}
         <div className="mb-8 flex justify-center">
           <div className="relative group">
-            <div className="w-40 h-40 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 p-1 animate-spin-slow">
+            <div className="w-40 h-40 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 p-1">
               <Avatar className="w-full h-full">
                 <AvatarImage 
                   src={profileImage || undefined} 
@@ -137,22 +137,22 @@ const Hero = () => {
 
         {/* Main Content */}
         <div className="mb-12 transform animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Ganapathi Ram
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-300 mb-2 font-light">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light">
             Nandhagopal
           </h2>
           <div className="h-16 flex items-center justify-center">
-            <h3 className="text-2xl md:text-4xl text-blue-400 font-semibold">
+            <h3 className="text-xl md:text-2xl lg:text-4xl text-blue-400 font-semibold">
               {currentText}
               <span className="animate-pulse">|</span>
             </h3>
           </div>
-          <p className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mt-6">
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mt-6">
             Founder of <span className="text-blue-400 font-semibold">BUDE Global Enterprise</span> - 
-            Transforming businesses through innovative ERP solutions, cutting-edge app development, 
-            and strategic digital transformation. Building the future, one solution at a time.
+            Transforming businesses through innovative ERP solutions across Manufacturing, Service, and Healthcare sectors. 
+            Building the future, one solution at a time.
           </p>
         </div>
 
