@@ -55,25 +55,25 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Dynamic Island Navigation */}
       <div className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-1000 ease-out ${
         islandExpanded 
-          ? 'w-[90vw] max-w-[700px] h-16 bg-black/90 backdrop-blur-xl rounded-full border border-blue-500/20' 
+          ? 'w-[95vw] max-w-[600px] h-14 bg-black/90 backdrop-blur-xl rounded-full border border-blue-500/20' 
           : 'w-32 h-8 bg-black/60 backdrop-blur-sm rounded-full'
       }`}>
-        <div className="flex items-center justify-between h-full px-3 md:px-6">
+        <div className="flex items-center justify-between h-full px-2 md:px-6">
           {islandExpanded && (
             <div className="flex items-center justify-between w-full animate-fade-in">
-              <span className="text-blue-400 text-sm md:text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-blue-400 text-xs md:text-lg font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Portfolio
               </span>
-              <div className="hidden md:flex items-center space-x-8">
-                {['home', 'about', 'services', 'portfolio', 'contact'].map((item) => (
+              <div className="hidden sm:flex items-center space-x-4 md:space-x-8">
+                {['home', 'about', 'services', 'contact'].map((item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item)}
-                    className="text-gray-300 hover:text-blue-400 text-sm font-medium transition-all duration-300 capitalize relative group"
+                    className="text-gray-300 hover:text-blue-400 text-xs md:text-sm font-medium transition-all duration-300 capitalize relative group"
                   >
                     {item}
                     <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></div>
@@ -129,9 +129,6 @@ const Hero = () => {
               onChange={handleImageUpload}
               className="hidden"
             />
-            
-            <div className="absolute -inset-3 rounded-full border-2 border-blue-400/20 animate-pulse"></div>
-            <div className="absolute -inset-6 rounded-full border border-cyan-400/10 animate-pulse delay-1000"></div>
           </div>
         </div>
 
@@ -158,13 +155,13 @@ const Hero = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://github.com/ganapathiram" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
+          <a href="https://github.com/Ganapathyram-Nandhagopal" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
             <Github size={24} className="group-hover:text-blue-400 transition-colors" />
           </a>
-          <a href="https://linkedin.com/in/ganapathiram" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
+          <a href="https://www.linkedin.com/in/ganapathyramnandhagopal/" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
             <Linkedin size={24} className="group-hover:text-blue-400 transition-colors" />
           </a>
-          <a href="mailto:ganapathi@budeglobal.com" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
+          <a href="mailto:ganapathyram.n@gmail.com" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
             <Mail size={24} className="group-hover:text-blue-400 transition-colors" />
           </a>
           <a href="tel:+918765432109" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
