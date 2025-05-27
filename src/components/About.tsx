@@ -1,19 +1,35 @@
 
-import { Code, Users, Lightbulb, Target, Eye, Heart } from 'lucide-react';
+import { Code, Database, Users, Award, Target, Lightbulb, GraduationCap, Briefcase, TrendingUp } from 'lucide-react';
 
 const About = () => {
-  const stats = [
-    { number: '5+', label: 'Years Experience' },
-    { number: '50+', label: 'Projects Completed' },
-    { number: '3', label: 'Industry Sectors' },
-    { number: '100%', label: 'Client Satisfaction' }
+  const features = [
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "ERPNext Implementation",
+      description: "Complete ERP solutions tailored for Manufacturing, Service, and Healthcare sectors."
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "Business Development",
+      description: "Strategic growth initiatives and market expansion consulting services."
+    },
+    {
+      icon: <Briefcase className="w-6 h-6" />,
+      title: "Project Management",
+      description: "End-to-end project execution from planning to successful deployment."
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "ERP Consulting",
+      description: "Expert consultation for business process optimization and system enhancement."
+    }
   ];
 
-  const skills = [
-    { name: 'ERPNext Implementation', level: 95 },
-    { name: 'Business Development', level: 90 },
-    { name: 'Project Management', level: 88 },
-    { name: 'ERP Consulting', level: 92 }
+  const achievements = [
+    { icon: <Users />, number: "50+", label: "Happy Clients" },
+    { icon: <Award />, number: "100+", label: "Projects Delivered" },
+    { icon: <Target />, number: "98%", label: "Client Satisfaction" },
+    { icon: <Lightbulb />, number: "5+", label: "Years Experience" }
   ];
 
   return (
@@ -24,124 +40,113 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            Transforming businesses through innovative ERP solutions and strategic consulting
+            I'm the founder of <span className="text-blue-400 font-semibold">BUDE Global Enterprise</span>, 
+            a passionate ERP consultant dedicated to transforming businesses through innovative ERPNext solutions. 
+            With expertise spanning Manufacturing, Service, and Healthcare sectors, 
+            I help organizations streamline operations and accelerate growth.
           </p>
         </div>
 
-        {/* My Journey Section */}
-        <div className="mb-20">
-          <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-3xl p-8 md:p-12 border border-blue-500/20">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center md:text-left">
-              My Journey
-            </h3>
-            <div className="text-gray-300 leading-relaxed space-y-6 text-base md:text-lg">
-              <p className="text-center md:text-left">
-                I graduated with a degree in Commerce, specializing in Computer Applications 🎓. This laid the foundation for my journey into the world of ERP solutions. I initially kick-started my career as an ERPNext Implementation Consultant 🛠️, where I gained invaluable experience and insight into the ERP landscape.
-              </p>
-              <p className="text-center md:text-left">
-                With comprehensive knowledge and hands-on experience in ERPNext Implementation, Business Development 📈, Project Management 📊, and Consulting 💡, I have the skill set to deliver high-quality ERP solutions tailored to meet the unique needs of each client.
-              </p>
-              <p className="text-center md:text-left">
-                At present, my role is laser-focused on spearheading business development initiatives 🚀. I am keenly concentrated on the Manufacturing 🏭, Service 📞, and Healthcare 🏥 sectors, where I aim to implement ERP solutions that streamline operations, enhance productivity, and drive business growth.
-              </p>
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="space-y-8">
+            <h3 className="text-3xl font-semibold text-white mb-8">My Vision & Mission</h3>
+            <div className="space-y-8">
+              <div className="p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-xl border border-blue-500/20">
+                <h4 className="text-xl font-semibold text-blue-400 mb-3">Vision</h4>
+                <p className="text-gray-400 leading-relaxed">
+                  To be the leading catalyst for ERP transformation, empowering businesses across Manufacturing, 
+                  Service, and Healthcare sectors to thrive through innovative ERPNext solutions.
+                </p>
+              </div>
+              
+              <div className="p-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-xl border border-purple-500/20">
+                <h4 className="text-xl font-semibold text-purple-400 mb-3">Mission</h4>
+                <p className="text-gray-400 leading-relaxed">
+                  To deliver cutting-edge ERPNext implementations and business development strategies 
+                  that drive measurable growth while maintaining the highest standards of 
+                  quality and customer satisfaction.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-3 mt-8">
+              {['ERPNext', 'Business Development', 'Project Management', 'Manufacturing ERP', 'Healthcare Solutions', 'Service Industry'].map((tech) => (
+                <span key={tech} className="px-4 py-2 bg-blue-600/20 text-blue-300 rounded-full text-sm border border-blue-500/30 hover:bg-blue-600/30 transition-colors">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
-        </div>
 
-        {/* Vision & Mission */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          {/* Vision */}
-          <div className="bg-gray-800/30 p-8 rounded-3xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group">
-            <div className="flex items-center mb-6">
-              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                <Eye className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white">Vision</h3>
-            </div>
-            <p className="text-gray-400 leading-relaxed">
-              To be the leading catalyst in digital transformation, empowering businesses across Manufacturing, Service, and Healthcare sectors with innovative ERP solutions that drive sustainable growth and operational excellence.
-            </p>
-          </div>
-
-          {/* Mission */}
-          <div className="bg-gray-800/30 p-8 rounded-3xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group">
-            <div className="flex items-center mb-6">
-              <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white">Mission</h3>
-            </div>
-            <p className="text-gray-400 leading-relaxed">
-              To deliver comprehensive ERPNext solutions that transform business operations, enhance productivity, and create lasting value through strategic consulting, implementation excellence, and unwavering client support.
-            </p>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-gray-800/30 p-6 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group hover:scale-105">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:text-cyan-400 transition-colors">
-                {stat.number}
-              </div>
-              <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Skills Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Core Expertise</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {skills.map((skill, index) => (
-              <div key={index} className="bg-gray-800/30 p-6 rounded-2xl border border-gray-700/50">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-white font-semibold">{skill.name}</span>
-                  <span className="text-blue-400 font-bold">{skill.level}%</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="group p-8 bg-gray-800/30 rounded-2xl hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 border border-gray-700/50 hover:border-blue-500/50">
+                <div className="text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
                 </div>
-                <div className="w-full bg-gray-700/50 rounded-full h-3">
-                  <div 
-                    className="bg-gradient-to-r from-blue-500 to-cyan-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">{feature.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Values Section */}
-        <div>
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Core Values</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center bg-gray-800/30 p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group">
-              <div className="inline-flex p-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Code className="w-8 h-8 text-white" />
+        {/* My Journey Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              My Journey
+            </h3>
+          </div>
+          
+          <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 md:p-12 border border-gray-700/50">
+            <div className="flex items-start space-x-4 mb-6">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full">
+                <GraduationCap className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Innovation</h4>
-              <p className="text-gray-400 leading-relaxed">
-                Continuously pushing boundaries with cutting-edge ERP solutions and emerging technologies
-              </p>
+              <div className="flex-1">
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  I graduated with a degree in <span className="text-blue-400 font-semibold">Commerce, specializing in Computer Applications</span> 🎓. 
+                  This laid the foundation for my journey into the world of ERP solutions. I initially kick-started my career as an 
+                  <span className="text-cyan-400 font-semibold"> ERPNext Implementation Consultant</span> 🛠️, where I gained invaluable experience 
+                  and insight into the ERP landscape.
+                </p>
+              </div>
             </div>
-            <div className="text-center bg-gray-800/30 p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group">
-              <div className="inline-flex p-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-white mb-4">Collaboration</h4>
-              <p className="text-gray-400 leading-relaxed">
-                Building strong partnerships and fostering teamwork to achieve exceptional results
+            
+            <div className="border-l-2 border-blue-500/30 ml-6 pl-8 space-y-6">
+              <p className="text-gray-300 leading-relaxed text-lg">
+                With comprehensive knowledge and hands-on experience in <span className="text-blue-400 font-semibold">ERPNext Implementation</span>, 
+                <span className="text-green-400 font-semibold"> Business Development</span> 📈, 
+                <span className="text-purple-400 font-semibold"> Project Management</span> 📊, and 
+                <span className="text-cyan-400 font-semibold"> Consulting</span> 💡, I have the skill set to deliver high-quality ERP solutions 
+                tailored to meet the unique needs of each client.
               </p>
-            </div>
-            <div className="text-center bg-gray-800/30 p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group">
-              <div className="inline-flex p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-white mb-4">Excellence</h4>
-              <p className="text-gray-400 leading-relaxed">
-                Delivering superior quality solutions that exceed expectations and drive lasting success
+              
+              <p className="text-gray-300 leading-relaxed text-lg">
+                At present, my role is laser-focused on <span className="text-blue-400 font-semibold">spearheading business development initiatives</span> 🚀. 
+                I am keenly concentrated on the <span className="text-orange-400 font-semibold">Manufacturing</span> 🏭, 
+                <span className="text-green-400 font-semibold"> Service</span> 📞, and 
+                <span className="text-red-400 font-semibold"> Healthcare</span> 🏥 sectors, where I aim to implement ERP solutions that 
+                streamline operations, enhance productivity, and drive business growth.
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Achievements Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {achievements.map((achievement, index) => (
+            <div key={index} className="text-center p-8 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group hover:transform hover:scale-105">
+              <div className="text-blue-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                {achievement.icon}
+              </div>
+              <div className="text-4xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {achievement.number}
+              </div>
+              <div className="text-gray-400 text-sm">{achievement.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
