@@ -35,8 +35,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "ganapathyram.n@gmail.com",
-      link: "mailto:ganapathyram.n@gmail.com",
+      value: "ganapathi@budeglobal.com",
+      link: "mailto:ganapathi@budeglobal.com",
       description: "Let's discuss your project"
     },
     {
@@ -57,18 +57,18 @@ const Contact = () => {
 
   const projectTypes = [
     'ERPNext Consulting',
-    'Business Development Strategy',
-    'Project Management & Consulting',
-    'ERP Training & Support',
+    'Flutter App Development',
+    'RFID Integration',
+    'Digital Marketing',
     'Complete Digital Transformation',
     'Other'
   ];
 
   const budgetRanges = [
-    '$2,000 - $5,000',
     '$5,000 - $15,000',
     '$15,000 - $50,000',
-    '$50,000+',
+    '$50,000 - $100,000',
+    '$100,000+',
     'Let\'s Discuss'
   ];
 
@@ -88,7 +88,7 @@ const Contact = () => {
             Let's Work Together
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your business with innovative ERP solutions? 
+            Ready to transform your business with innovative technology solutions? 
             Let's discuss your project and create something extraordinary together.
           </p>
         </div>
@@ -99,8 +99,8 @@ const Contact = () => {
             <div>
               <h3 className="text-3xl font-bold text-white mb-6">Get In Touch</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                I'm passionate about helping businesses leverage ERP technology for growth. 
-                Whether you're looking for ERPNext implementation, business development strategies, or digital transformation, 
+                I'm passionate about helping businesses leverage technology for growth. 
+                Whether you're looking for ERP solutions, mobile apps, or digital transformation, 
                 I'm here to turn your vision into reality.
               </p>
             </div>
@@ -127,10 +127,10 @@ const Contact = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
-                <a href="https://www.linkedin.com/in/ganapathyramnandhagopal/" className="group p-4 bg-gray-800/50 rounded-xl hover:bg-blue-600/20 transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50">
+                <a href="https://linkedin.com/in/ganapathiram" className="group p-4 bg-gray-800/50 rounded-xl hover:bg-blue-600/20 transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50">
                   <Linkedin size={24} className="group-hover:text-blue-400 transition-colors" />
                 </a>
-                <a href="https://github.com/Ganapathyram-Nandhagopal" className="group p-4 bg-gray-800/50 rounded-xl hover:bg-blue-600/20 transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50">
+                <a href="https://github.com/ganapathiram" className="group p-4 bg-gray-800/50 rounded-xl hover:bg-blue-600/20 transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50">
                   <Github size={24} className="group-hover:text-blue-400 transition-colors" />
                 </a>
                 <a href="https://wa.me/918765432109" className="group p-4 bg-gray-800/50 rounded-xl hover:bg-green-600/20 transition-all duration-300 border border-gray-700/50 hover:border-green-500/50">
@@ -279,7 +279,7 @@ const Contact = () => {
         <div className="text-center mt-20 pt-12 border-t border-gray-700/50">
           <div className="mb-6">
             <h4 className="text-2xl font-bold text-white mb-2">BUDE Global Enterprise</h4>
-            <p className="text-gray-400">Transforming businesses through innovative ERP solutions</p>
+            <p className="text-gray-400">Transforming businesses through innovative technology solutions</p>
           </div>
           <p className="text-gray-500">
             © 2024 Ganapathi Ram Nandhagopal. All rights reserved. Built with passion for innovation.
