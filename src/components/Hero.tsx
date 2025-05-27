@@ -106,7 +106,7 @@ const Hero = () => {
               <Avatar className="w-full h-full">
                 <AvatarImage 
                   src={profileImage || undefined} 
-                  alt="Ganapathi Ram Nandhagopal" 
+                  alt="Ganapathyram" 
                   className="object-cover"
                 />
                 <AvatarFallback className="bg-gradient-to-br from-blue-800 to-purple-800 text-white text-3xl">
@@ -130,15 +130,15 @@ const Hero = () => {
               className="hidden"
             />
             
-            <div className="absolute -inset-3 rounded-full border-2 border-blue-400/20 animate-pulse"></div>
-            <div className="absolute -inset-6 rounded-full border border-cyan-400/10 animate-pulse delay-1000"></div>
+            <div className="absolute -inset-3 rounded-full border-2 border-blue-400/20"></div>
+            <div className="absolute -inset-6 rounded-full border border-cyan-400/10"></div>
           </div>
         </div>
 
         {/* Main Content */}
         <div className="mb-12 transform animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Ganapathi Ram
+            Ganapathyram
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-2 font-light">
             Nandhagopal
@@ -158,13 +158,13 @@ const Hero = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://github.com/ganapathiram" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
+          <a href="https://github.com/Ganapathyram-Nandhagopal" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
             <Github size={24} className="group-hover:text-blue-400 transition-colors" />
           </a>
-          <a href="https://linkedin.com/in/ganapathiram" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
+          <a href="https://www.linkedin.com/in/ganapathyramnandhagopal/" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
             <Linkedin size={24} className="group-hover:text-blue-400 transition-colors" />
           </a>
-          <a href="mailto:ganapathi@budeglobal.com" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
+          <a href="mailto:ganapathyram.n@gmail.com" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
             <Mail size={24} className="group-hover:text-blue-400 transition-colors" />
           </a>
           <a href="tel:+918765432109" className="group p-4 bg-gray-800/50 rounded-full hover:bg-blue-600/20 transition-all duration-300 transform hover:scale-110 border border-gray-700/50 hover:border-blue-500/50">
